@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Fragment de Login -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_bg_light"
+    tools:context=".auth.LoginFragment"
+    android:id="@+id/login_frag">
+
+    <ImageView
+        android:id="@+id/appLogo"
+        android:transitionName="logo"
+        android:layout_width="@dimen/width_logo"
+        android:layout_height="@dimen/height_logo"
+        android:contentDescription="@string/content_des"
+        app:srcCompat="@drawable/logo"
+        android:layout_marginTop="@dimen/margin_default"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/til_email"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_email"
+        android:transitionName="til_email"
+        android:paddingHorizontal="@dimen/padding_default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_default"
+        android:hint="@string/email_placeholder"
+        app:helperText="@string/email_required"
+        app:startIconDrawable="@drawable/ic_email"
+        app:errorEnabled="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginTop="@dimen/margin_default"
+        app:layout_constraintTop_toBottomOf="@id/appLogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/til_pass">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_email"
+            android:transitionName="et_email"
+            android:inputType="textEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_pass"
+        android:transitionName="til_pass"
+        android:paddingHorizontal="@dimen/padding_default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_default"
+        android:hint="@string/pass_placeholder"
+        app:helperText="@string/pass_help"
+        app:startIconDrawable="@drawable/ic_pass"
+        app:endIconMode="password_toggle"
+        app:errorEnabled="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintTop_toBottomOf="@id/til_email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/lyt_btnNative">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_text_pass"
+            android:transitionName="txt_pass"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/lyt_btnNative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="@dimen/margin_default"
+        app:layout_constraintTop_toBottomOf="@id/til_pass"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLogIn"
+            style="@style/BuyNdEarn.Button"
+            android:text="@string/btn_signIn"
+            android:textColor="@color/disabled_color"
+            android:enabled="false"
+            android:layout_marginEnd="@dimen/margin_min" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSignUp"
+            android:transitionName="reg"
+            style="@style/BuyNdEarn.Button"
+            android:text="@string/btn_signUp"
+            android:layout_marginStart="@dimen/margin_min"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

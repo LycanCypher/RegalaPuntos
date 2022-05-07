@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Ancho del logotipo en Login -->
+    <dimen name="width_logo">220dp</dimen>
+    <dimen name="height_logo">200dp</dimen>
+    <!-- Ancho del logotipo en Signup -->
+    <dimen name="width_logo_signup">170dp</dimen>
+    <dimen name="height_logo_signup">150dp</dimen>
+    <!-- Márgenes -->
+    <dimen name="margin_default">16dp</dimen>
+    <dimen name="margin_min">8dp</dimen>
+    <dimen name="margin_max">24dp</dimen>
+    <!-- Paddings -->
+    <dimen name="padding_default">16dp</dimen>
+    <dimen name="padding_min">8dp</dimen>
+    <dimen name="padding_max">24dp</dimen>
+    <!-- Textos -->
+    <dimen name="txt_size_default">16dp</dimen>
+    <dimen name="txt_size_min">8dp</dimen>
+    <dimen name="txt_size_max">24dp</dimen>
+    <!-- Botones -->
+    <dimen name="btn_radius">8dp</dimen>
+    <dimen name="btn_txt_size">14sp</dimen>
+</resources>
